@@ -3,17 +3,40 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-    {
-    "label": "compile",
-    "type": "shell",
-    "command": "g++",
-    "args": ["-Wall","-std=c++17",
-    "main.cpp"
-    ],
-    "group": {
-    "kind": "build",
-    "isDefault": true
-    }
-    }
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-std=c++17",
+                "algorithm1Class.cpp",
+                "algorithm2Class.cpp",
+                "smarter_search.cpp",
+                "main.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "cpp.exe build active file",
+            "command": "C:\\MinGW\\bin\\cpp.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
     ]
     }
