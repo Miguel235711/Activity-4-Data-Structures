@@ -13,6 +13,7 @@
                 "algorithm1Class.cpp",
                 "algorithm2Class.cpp",
                 "smarter_search.cpp",
+                "mp_demo.cpp",
                 "main.cpp"
             ],
             "group": {
