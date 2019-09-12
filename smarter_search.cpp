@@ -4,14 +4,17 @@
 using namespace std;
 
 class smarter_search{
+    public:
+        void countEveryComparissonOfStringComparisson(string const& text, string const& pat){
+            FastString(pat);
+            Encontrar(text);
+        }
+        
     int patronString[100] = {};
     int arregloSize;
     std::string patron;
     std::string texto;
-    void countEveryComparissonOfStringComparisson(string const& text, string const& pat){
-        FastString(pat);
-        Encontrar(text);
-    }
+   
     void FastString(string codigo){
         string patron = codigo;
         string arreglo = patron;

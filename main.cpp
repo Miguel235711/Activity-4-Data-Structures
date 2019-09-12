@@ -13,7 +13,7 @@ int main()
 	string the_pattern = "ana";
     bruteForceStringMatching::search_all(the_text,the_pattern);
     bruteForceStringMatchingIterator::search_all(the_text,the_pattern);
-    
+    smarter_search::countEveryComparissonOfStringComparisson(the_text,the_pattern);
 	system("pause");
 	return EXIT_SUCCESS;
 }
