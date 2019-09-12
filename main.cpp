@@ -2,7 +2,7 @@
 #include "algorithm1Class.cpp"
 #include "algorithm2Class.cpp"
 #include "kmp_demo.cpp"
-
+///Miguel Ángel Muñoz Vázquez , Aarón Pérez Ontiveros
 using namespace std;
 
 vector<int> mp_demo::MPtable;
