@@ -20,12 +20,15 @@ void printTheory2(){
 
 int main()
 {
+<<<<<<< HEAD
 	string the_text = "panamanian banana fanatics can manage anacondas";
 	string the_pattern = "ana";
     bruteForceStringMatching::search_all(the_text,the_pattern);
     bruteForceStringMatchingIterator::search_all(the_text,the_pattern);
     //smarter_search::countEveryComparissonOfStringComparisson(the_text,the_pattern);
 	system("pause");
+=======
+>>>>>>> 22203846b585c9db03130a028ff0f0999bf48ac1
 	int com=0;
 	string s,pattern;
 	while(com!=8){ /// because 8 means exit
