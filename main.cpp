@@ -20,15 +20,6 @@ void printTheory2(){
 
 int main()
 {
-<<<<<<< HEAD
-	string the_text = "panamanian banana fanatics can manage anacondas";
-	string the_pattern = "ana";
-    bruteForceStringMatching::search_all(the_text,the_pattern);
-    bruteForceStringMatchingIterator::search_all(the_text,the_pattern);
-    //smarter_search::countEveryComparissonOfStringComparisson(the_text,the_pattern);
-	system("pause");
-=======
->>>>>>> 22203846b585c9db03130a028ff0f0999bf48ac1
 	int com=0;
 	string s,pattern;
 	while(com!=8){ /// because 8 means exit
@@ -40,7 +31,8 @@ int main()
 		cout << "5 for search_chlorella_vulgaris\n";
 		cout << "6 to print answers to questions 1,2 and 3\n";
 		cout << "7 to print answers to questions 4 and 5\n";
-		cout << "8 exit\n"; 
+		cout << "8 to print answers to questions 4 and 5\n";
+		cout << "9 exit\n"; 
 		cout << "enter command: ";
 		cin >> com;
 		if(com==1){
@@ -82,7 +74,14 @@ int main()
 		}else if(com==7){
 			///print answers to questions 4 and 5 
 			printTheory2();
-		}else if(com!=8){
+		}else if(com==8){
+			cout << "enter s: " ;
+			cin >> s;
+			cout << "enter pattern: ";
+			cin >> pattern;
+			
+		}
+		else if(com!=9){
 			cout << "command no valid";
 		}
 		system("pause");
