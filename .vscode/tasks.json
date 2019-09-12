@@ -14,6 +14,7 @@
                 "algorithm2Class.cpp",
                 "smarter_search.cpp",
                 "mp_demo.cpp",
+                "kmp_demo.cpp",
                 "main.cpp"
             ],
             "group": {
