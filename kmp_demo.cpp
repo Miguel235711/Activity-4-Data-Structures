@@ -3,7 +3,7 @@
 
 class kmp_demo{
     public:
-    static void printMatches(const string & pattern,const string & filename){
+    static void printMatches(const string & pattern,const string & filename,bool onlyDNA){
         ifstream in;
         in.open(filename); 
         if(in.fail()){
@@ -14,9 +14,10 @@ class kmp_demo{
             cout << "file " << filename << " was opened successfully\n";
             //mp_demo::MPentry(int i) to get value of table
             ///get string from in
-            string s,partialS;
-            while(in>>partialS){
-                s.append(partialS);
+            string s;
+            char character;
+            while(in>>character){
+                s.push_back(character);
             }
             ///determine matches of pattern in s
             unsigned int i = 0 ; 
@@ -25,7 +26,7 @@ class kmp_demo{
                 unsigned int k = 0 , ith = i ; 
                 while(k<pattern.size()&&pattern[k]==s[ith])ith++,k++; ///advance i and k , because pattern[k]  and s[i] match
                 if(k==pattern.size()) cout << "new match at i = " << i << "\n";
-                i += k - mp_demo::MPentry(pattern,k);
+                i += k - mp_demo::MPentry(pattern,k-1);
             }
         }
     }

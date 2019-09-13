@@ -14,7 +14,7 @@ class mp_demo{
             pat_=pat;
             ///calculate MPtable in linear time O(pat.size())
             MPtable.clear();///clear MPtable
-            MPtable.push_back(0);///always -1 in first position, but now be need it 0 for simplying construction
+            MPtable.push_back(0);//always 0 in first position for construction
             for(unsigned int ithChar = 1 ; ithChar < pat.size();ithChar++){
                 ///for each index of path
                 int j = MPtable[ithChar-1];///before index
@@ -24,7 +24,7 @@ class mp_demo{
                     j++;
                 MPtable.push_back(j);
             }
-            MPtable[0]=-1;///assign the default -1, as mentioned before
+            MPtable[0]=-1;///assign the default -1
         }
     }  
     public:

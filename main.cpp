@@ -20,9 +20,9 @@ void printTheory2(){
 
 int main()
 {
-	int com=0;
+	string com="0";
 	string s,pattern;
-	while(com!=8){ /// because 8 means exit
+	while(com!="8"){ /// because 8 means exit
 		system("cls");
 		cout << "1 for compare_demo\n";
 		cout << "2 for iter_demo\n";
@@ -35,7 +35,7 @@ int main()
 		cout << "9 exit\n"; 
 		cout << "enter command: ";
 		cin >> com;
-		if(com==1){
+		if(com=="1"){
 			///compare_mode
 			cout << "compare mode\n";
 			cout << "enter s: " ;
@@ -43,7 +43,7 @@ int main()
 			cout << "enter pattern: ";
 			cin >> pattern;
 			bruteForceStringMatching::search_all(s,pattern);
-		}else if(com==2){
+		}else if(com=="2"){
 			///iter_demo
 			cout << "iter mode\n";
 			cout << "enter s: " ;
@@ -51,37 +51,33 @@ int main()
 			cout << "enter pattern: ";
 			cin >> pattern;
 			bruteForceStringMatchingIterator::search_all(s,pattern);
-		}else if(com==3){
+		}else if(com=="3"){
 			///mp_demo
 			cout << "mp demo\n";
 			cout << "enter pattern to generate and  print its mp_table: ";
 			cin >> pattern;
 			mp_demo::printMPTable(pattern);
-		}else if(com==4){
+		}else if(com=="4"){
 			///kmp_demo
 			cout << "kmp demo\n";
 			cout << "enter file name of s: ";
 			cin >> s;
 			cout << "enter pattern: ";
 			cin >> pattern;
-			kmp_demo::printMatches(pattern,s);
-		}else if(com==5){
+			kmp_demo::printMatches(pattern,s,0);
+		}else if(com=="5"){
 			///search_chlorella_vulgaris
 			cout << "search_chlorella_vulgaris\n";
-		}else if(com==6){
+			cout << "enter pattern: ";
+			cin >> s;
+			kmp_demo::printMatches(s,"chlorella_vulgaris.dat",1);
+		}else if(com=="6"){
 			///print answers to questions 1 , 2 and 3 
 			printTheory1();
-		}else if(com==7){
+		}else if(com=="7"){
 			///print answers to questions 4 and 5 
 			printTheory2();
-		}else if(com==8){
-			cout << "enter s: " ;
-			cin >> s;
-			cout << "enter pattern: ";
-			cin >> pattern;
-			
-		}
-		else if(com!=9){
+		}else if(com!="8"){
 			cout << "command no valid";
 		}
 		system("pause");
