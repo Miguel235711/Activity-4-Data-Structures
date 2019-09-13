@@ -31,7 +31,8 @@ int main()
 		cout << "5 for search_chlorella_vulgaris\n";
 		cout << "6 to print answers to questions 1,2 and 3\n";
 		cout << "7 to print answers to questions 4 and 5\n";
-		cout << "8 exit\n"; 
+		cout << "8 to print answers to questions 4 and 5\n";
+		cout << "9 exit\n"; 
 		cout << "enter command: ";
 		cin >> com;
 		if(com=="1"){
