@@ -8,7 +8,9 @@ class bruteForceStringMatchingIterator{
         static void search_all(string const& text, string const& pat)  {
             cout << "Results of bruteForceStringMatchingIterator()\n";
             int pos = 0 ;
+            int comparaciones=0;
             for(auto it1 = text.begin();it1+pat.size()-1<text.end();it1++){
+
                 cout << "does start at position (" << pos++ << ") match with pattern?: ";
                 bool  itMatches = true; 
                 for(auto it2 = pat.begin(),it1Aux=it1;it2!=pat.end();it2++,it1Aux++){///check if they match
@@ -20,6 +22,8 @@ class bruteForceStringMatchingIterator{
                 }
                 if(itMatches)
                     cout << "1\n";///matching
+                    comparaciones++;
             }
+            cout<<"Cantidad de coincidencias encontradas: "<<comparaciones<<"\n";
         }
 };
